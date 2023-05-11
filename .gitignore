@@ -1,6 +1,6 @@
 node_modules/**
-test/e2e-app-template/www/certificates/*.cer
-test/e2e-app-template/www/certificates/*.pkcs
+test/e2e-app-template/public/certificates/*.cer
+test/e2e-app-template/public/certificates/*.pkcs
 tags
 .zedstate
 npm-debug.log

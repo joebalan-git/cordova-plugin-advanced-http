@@ -1,5 +1,9 @@
 # Changelog
 
+#@ 3.3.2
+
+- :warning: **Breaking Change**: Certificates must be placed in "public/certificates" folder
+
 # 3.3.1
 
 - Fixed #427: missing connection check on Android (thanks moshe5745)

@@ -21,7 +21,7 @@ const helpers = {
   setPinnedServerTrustMode: function (resolve, reject) { cordova.plugin.http.setServerTrustMode('pinned', resolve, reject); },
   setNoneClientAuthMode: function (resolve, reject) { cordova.plugin.http.setClientAuthMode('none', resolve, reject); },
   setBufferClientAuthMode: function (resolve, reject) {
-    var path = cordova.file.applicationDirectory + 'www/certificates/badssl-client-cert.pkcs';
+    var path = cordova.file.applicationDirectory + 'public/certificates/badssl-client-cert.pkcs';
 
     resolveLocalFileSystemURL(path, function(entry) {
       helpers.readFileEntry(entry, 'buffer', function(pkcs) {

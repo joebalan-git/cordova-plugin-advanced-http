@@ -3,7 +3,7 @@ const https = require('https');
 const path = require('path');
 
 const SOURCE_URL = 'https://badssl.com/certs/badssl.com-client.p12';
-const TARGET_PATH = path.join(__dirname, '../test/e2e-app-template/www/certificates/badssl-client-cert.pkcs');
+const TARGET_PATH = path.join(__dirname, '../test/e2e-app-template/public/certificates/badssl-client-cert.pkcs');
 
 const downloadPkcsContainer = (source, target) => new Promise((resolve, reject) => {
   const file = fs.createWriteStream(target);
