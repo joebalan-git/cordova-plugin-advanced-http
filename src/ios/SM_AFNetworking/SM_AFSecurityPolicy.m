@@ -279,7 +279,14 @@ static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
             NSArray *serverCertificates = AFCertificateTrustChainForServerTrust(serverTrust);
 
             for (NSData *trustChainCertificate in [serverCertificates reverseObjectEnumerator]) {
-                if ([self.pinnedCertificates containsObject:trustChainCertificate]) {
+                // Added try catch below to avoid app crashes in some devices...
+                @try{
+                    if ([self.pinnedCertificates containsObject:trustChainCertificate]) {
+                        return YES;
+                    }
+                }
+                @catch (NSException *exception){
+                    // TODO: For now this is defaulted as valid to continue, but should be updated to a proper response or message to be sent back to caller...
                     return YES;
                 }
             }
