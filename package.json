@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-advanced-http-capacitor",
-  "version": "3.3.2",
+  "version": "3.3.3",
   "description": "[Capacitor hack] Cordova / Phonegap plugin for communicating with HTTP servers using SSL pinning",
   "scripts": {
     "update:cert": "node ./scripts/update-e2e-server-cert.js && node ./scripts/update-e2e-client-cert.js",
